@@ -3,9 +3,9 @@ from zgameDAO import gameDAO
 app = Flask(__name__, static_url_path='', static_folder='.')
 
 
-@app.route('/')
-def index():
-    return (404)
+#@app.route('/')
+#def index():
+    #return (404)
 
 #curl "http://127.0.0.1:5000/games"
 @app.route('/games')

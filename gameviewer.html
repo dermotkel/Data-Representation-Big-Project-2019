@@ -168,9 +168,10 @@
         console.log(JSON.stringify(game))
         return game
     }
+    host = window.location.origin
     function getAllAjax(){
         $.ajax({
-            "url": "http://127.0.0.1:5000/games",
+            "url": host+"/games",
             "method":"GET",
             "data":"",
             "dataType": "JSON",
@@ -191,7 +192,7 @@
         //var car = {"reg":"12 D 1234","make":"Fiat","model":"Punto","price":3000}
         console.log(JSON.stringify(game));
         $.ajax({
-            "url": "http://127.0.0.1:5000/games",
+            "url": host+"/games",
             "method":"POST",
             "data":JSON.stringify(game),
             "dataType": "JSON",
@@ -212,7 +213,7 @@
         //var car = {"reg":"12 D 1234","price":8000}
         console.log(JSON.stringify(game));
         $.ajax({
-            "url": "http://127.0.0.1:5000/games/"+encodeURI(game.id),
+            "url": host+"/games/"+encodeURI(game.id),
             "method":"PUT",
             "data":JSON.stringify(game),
             "dataType": "JSON",
@@ -230,7 +231,7 @@
         
         //console.log(JSON.stringify('deleting '+id));
         $.ajax({
-            "url": "http://127.0.0.1:5000/games/"+encodeURI(id),
+            "url": host+"/games/"+encodeURI(id),
             "method":"DELETE",
             "data":"",
             "dataType": "JSON",
